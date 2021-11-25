@@ -30,6 +30,7 @@ namespace StudentskaSluzba.Models
         public DbSet<Profesor> Profesori { get; set; }
         public DbSet<Predmet> Predmeti { get; set; }
         public DbSet<Rezultati> Rezultati { get; set; }
+        public DbSet<Adresa> Adrese { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

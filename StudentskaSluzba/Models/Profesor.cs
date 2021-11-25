@@ -15,7 +15,7 @@ namespace StudentskaSluzba.Models
         public int Citiranost { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public ICollection<ZvanjeProfesora> Zvanja { get; set; }
+        public virtual ICollection<ZvanjeProfesora> Zvanja { get; set; }
         public ICollection<Predmet> Predmeti { get; set; }
 
         public Profesor()

@@ -16,9 +16,9 @@ namespace StudentskaSluzba.Models
         public string Password { get; set; }
         public Adresa Adresa { get; set; }
         public int AdresaId { get; set; }
-        public ICollection<TokStudija> TokStudija { get; set; }
-        public ICollection<Ispit> PrijavljeniIspiti { get; set; } 
-        public ICollection<Rezultati> Rezultati { get; set; }
+        public virtual ICollection<TokStudija> TokStudija { get; set; }
+        public virtual ICollection<Ispit> PrijavljeniIspiti { get; set; } 
+        public virtual ICollection<Rezultati> Rezultati { get; set; }
 
         public Student()
         {

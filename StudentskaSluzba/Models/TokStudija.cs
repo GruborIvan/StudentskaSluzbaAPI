@@ -11,8 +11,8 @@ namespace StudentskaSluzba.Models
     {
         public int Id { get; set; }
         public DateTime DatumUpisa { get; set; }
-        public string Godina { get; set; }
-        public string BrojUpisa { get; set; }
+        public int Godina { get; set; }
+        public int BrojUpisa { get; set; }
         public bool Budzet { get; set; }
         public ICollection<Student> Students { get; set; }
 

@@ -31,7 +31,15 @@ namespace StudentskaSluzba.Repository.Repository
 
         public bool StudentLogIn(string brojIndeksa, string password)
         {
-            throw new NotImplementedException();
+            List<Student> studenti = db.Studenti.ToList();
+            foreach(Student s in studenti)
+            {
+                if (s.BrojIndeksa == brojIndeksa && s.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
