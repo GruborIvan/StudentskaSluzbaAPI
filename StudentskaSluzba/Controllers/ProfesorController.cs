@@ -14,10 +14,17 @@ namespace StudentskaSluzba.Controllers
     public class ProfesorController : ApiController
     {
         IProfesorRepository repo;
+        IRezultatiRepository repo2;
 
         public ProfesorController()
         {
             repo = new ProfesorRepository();
+            repo2 = new RezultatiRepository();
+        }
+
+        public IEnumerable<StudentDTO2> GetStudentZaOcenjivanje(int predmetId,int rokId)
+        {
+            return repo.GetStudentiZaOcenjivanje(predmetId,rokId);
         }
 
         public IHttpActionResult Get(string emailAddress)
@@ -31,6 +38,16 @@ namespace StudentskaSluzba.Controllers
                 zp.Profesori = null;
             }
             return Ok(dto);
+        }
+
+        public IHttpActionResult Post(OcenaPostDTO postDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            repo2.PostOcena(postDto);
+            return Ok();
         }
 
     }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace StudentskaSluzba.Models.DTO
 {
-    public class PredmetiDTO
+    public class PredmetiDTO2
     {
         public int Id { get; set; }
         public string NazivPredmeta { get; set; }
@@ -14,16 +14,17 @@ namespace StudentskaSluzba.Models.DTO
         public string ImeProfesora { get; set; }
         public string DatumIspita { get; set; }
         public Rezultati Rezultati { get; set; }
-        public int Ocena { get; set; }
+        public int RokId { get; set; }
+        public string NazivRoka { get; set; }
 
-        public PredmetiDTO(int id, string nazivPredmeta, string sifraPredmeta, int brojESPB, string imeProfesora)
+        public PredmetiDTO2(int id, string nazivPredmeta, string sifraPredmeta, int brojESPB, string imeProfesora, int rokId)
         {
             Id = id;
             NazivPredmeta = nazivPredmeta;
             SifraPredmeta = sifraPredmeta;
             BrojESPB = brojESPB;
             ImeProfesora = imeProfesora;
+            RokId = rokId;
         }
-        
     }
 }

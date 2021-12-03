@@ -45,5 +45,27 @@ namespace StudentskaSluzba.Repository.Repository
             }
             return "";
         }
+
+        public IEnumerable<StudentDTO2> GetStudentiZaOcenjivanje(int predmetId,int idRok)
+        {
+            List<int> studentIds = new List<int>();
+            List<int> idRokova = new List<int>();
+            List<Rezultati> rezultati = db.Rezultati.Where(x => x.PredmetId == predmetId).Where(x => x.Ocena == 5).Where(x => x.Rok == idRok).ToList();
+            foreach(Rezultati rez in rezultati)
+            {
+                studentIds.Add(rez.StudentId);
+                idRokova.Add(rez.Rok);
+            }
+
+            List<StudentDTO2> retDTO = new List<StudentDTO2>();
+
+            for (int i = 0; i < studentIds.Count; i++)
+            {
+                Student s = db.Studenti.Find(studentIds[i]);
+                StudentDTO2 dto = new StudentDTO2(studentIds[i],s.Ime,s.Prezime,s.BrojIndeksa,s.Password,s.AdresaId,idRokova[i]);
+                retDTO.Add(dto);
+            }
+            return retDTO;
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace StudentskaSluzba.Repository.Interfaces
         IEnumerable<Profesor> GetProfesorForPredmet(int predmetId);
         Profesor GetProfesorByEmailAddress(string emailAddress);
         string GetZvanjeForProfesor(int profesorId);
+        IEnumerable<StudentDTO2> GetStudentiZaOcenjivanje(int predmetId,int idRok);
     }
 }

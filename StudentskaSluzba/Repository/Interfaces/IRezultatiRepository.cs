@@ -10,6 +10,7 @@ namespace StudentskaSluzba.Repository.Interfaces
 {
     public interface IRezultatiRepository
     {
-        IEnumerable<PredmetiDTO> GetPolozeniPredmeti(string brojIndeksa,int mode);
+        IEnumerable<PredmetiDTO> GetPolozeniPredmeti(string brojIndeksa,int mode, int ispitniRokId);
+        void PostOcena(OcenaPostDTO dto);
     }
 }

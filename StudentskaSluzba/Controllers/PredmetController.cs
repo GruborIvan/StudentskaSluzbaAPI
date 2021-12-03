@@ -1,4 +1,5 @@
 ﻿using StudentskaSluzba.Models;
+using StudentskaSluzba.Models.DTO;
 using StudentskaSluzba.Repository.Interfaces;
 using StudentskaSluzba.Repository.Repository;
 using System;
@@ -19,7 +20,7 @@ namespace StudentskaSluzba.Controllers
             _repository = new PredmetRepository();
         }
 
-        public IEnumerable<Predmet> GetPredmetiForProfesor(string profesorId)
+        public IEnumerable<PredmetiDTO2> GetPredmetiForProfesor(string profesorId)
         {
             return _repository.GetPredmetiForProfesor(profesorId);
         }

@@ -1,36 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace StudentskaSluzba.Models
+namespace StudentskaSluzba.Models.DTO
 {
-    [Table("Studenti")]
-    public class Student
+    public class StudentDTO2
     {
         public int Id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string BrojIndeksa { get; set; }
         public string Password { get; set; }
-        public Adresa Adresa { get; set; }
         public int AdresaId { get; set; }
-        public virtual ICollection<TokStudija> TokStudija { get; set; } 
-        public virtual ICollection<Rezultati> Rezultati { get; set; }
+        public int RokId { get; set; }
+        public Adresa Adresa { get; set; }
+        public List<TokStudija> TokStudija { get; set; }
 
-        public Student()
-        {
-
-        }
-
-        public Student(int id, string ime, string prezime, string brojIndeksa, Adresa adresa)
+        public StudentDTO2(int id, string ime, string prezime, string brojIndeksa, string password, int adresaId,int rokId)
         {
             Id = id;
             Ime = ime;
             Prezime = prezime;
             BrojIndeksa = brojIndeksa;
-            Adresa = adresa;
+            Password = password;
+            AdresaId = adresaId;
+            RokId = rokId;
         }
     }
 }

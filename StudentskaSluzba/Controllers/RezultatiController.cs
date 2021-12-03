@@ -20,9 +20,9 @@ namespace StudentskaSluzba.Controllers
             repo = new RezultatiRepository();
         }
 
-        public IEnumerable<PredmetiDTO> Get(string brIndeksa,int mode)
+        public IEnumerable<PredmetiDTO> Get(string brIndeksa,int mode,int ispitniRokId)
         {
-            return repo.GetPolozeniPredmeti(brIndeksa,mode);
+            return repo.GetPolozeniPredmeti(brIndeksa,mode,ispitniRokId);
         }
 
     }

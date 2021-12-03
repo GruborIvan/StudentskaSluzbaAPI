@@ -1,4 +1,5 @@
 ﻿using StudentskaSluzba.Models;
+using StudentskaSluzba.Models.DTO;
 using StudentskaSluzba.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -16,17 +17,17 @@ namespace StudentskaSluzba.Repository.Repository
             db = new ApplicationDbContext();
         }
 
-        public IEnumerable<Predmet> GetPredmetiForProfesor(string profesorId)
+        public IEnumerable<PredmetiDTO2> GetPredmetiForProfesor(string profesorId)
         {
             int profId = db.Profesori.Where(x => x.Email == profesorId).ToList()[0].Id;
 
-            List<Predmet> predmeti = new List<Predmet>();
+            List<PredmetiDTO2> predmeti = new List<PredmetiDTO2>();
             foreach(Predmet p in db.Predmeti.ToList())
             {
                 if (p.ProfesorId == profId)
                 {
-                    p.Profesor = null;
-                    predmeti.Add(p);
+                    PredmetiDTO2 dto = new PredmetiDTO2(p.Id,p.NazivPredmeta,p.SifraPredmeta,p.BrojESPB,p.Profesor.Ime + " " + p.Profesor.Prezime,0);
+                    predmeti.Add(dto);
                 }
             }
             return predmeti;

@@ -1,4 +1,5 @@
 ﻿using StudentskaSluzba.Models;
+using StudentskaSluzba.Models.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace StudentskaSluzba.Repository.Interfaces
 {
     public interface IPredmetRepository
     {
-        IEnumerable<Predmet> GetPredmetiForProfesor(string profesorId);
+        IEnumerable<PredmetiDTO2> GetPredmetiForProfesor(string profesorId);
     }
 }

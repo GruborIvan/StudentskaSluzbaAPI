@@ -13,9 +13,10 @@ namespace StudentskaSluzba.Models
         public DateTime DatumIVremeOdrzavanja { get; set; }
         public Ucionica Ucionica { get; set; }
         public int UcionicaId { get; set; }
-        public ICollection<Student> Studenti { get; set; }
-        public ICollection<IspitniRok> IspitniRokovi { get; set; }
-        public ICollection<Predmet> Predmeti { get; set; }
+        public virtual IspitniRok IspitniRok { get; set; }
+        public int IspitniRokId { get; set; }
+        public Predmet Predmet { get; set; }
+        public int PredmetId { get; set; }
 
         public Ispit()
         {
