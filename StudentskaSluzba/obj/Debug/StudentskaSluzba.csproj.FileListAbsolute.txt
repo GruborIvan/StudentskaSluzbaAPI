@@ -161,3 +161,6 @@ C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug
 C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.IspitPredmetRelationChanged.resources
 C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.RemoveStudentIspitreference.resources
 C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.DonKnw.resources
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.DatumKrajaVazenjaZvanjaFieldAdd.resources
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.Update.resources
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.Mistakefix.resources

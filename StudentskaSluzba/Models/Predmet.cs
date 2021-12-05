@@ -17,6 +17,8 @@ namespace StudentskaSluzba.Models
         public int ProfesorId { get; set; }
         public virtual ICollection<Ispit> Ispiti { get; set; }
         public virtual ICollection<Rezultati> Rezultati { get; set; }
+        public virtual TipPredispitnihObaveza TipPredispitnihObaveza { get; set; }
+        public int TipPredispitnihObavezaId { get; set; }
 
         public Predmet()
         {

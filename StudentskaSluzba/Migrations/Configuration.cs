@@ -69,20 +69,20 @@ namespace StudentskaSluzba.Migrations
             //    new Profesor() { Id = 5, Ime = "Pavle", Prezime = "Stanisavljevic", Citiranost = 18, Password = "123", Email = "prof5@app.com" }
             //);
 
-            //context.Predmeti.AddOrUpdate(
-            //    new Predmet() { Id = 1, NazivPredmeta = "Baze podataka 1", BrojESPB = 8, ProfesorId = 2, SifraPredmeta = "PR822NN" },
-            //    new Predmet() { Id = 2, NazivPredmeta = "Baze podataka 2", BrojESPB = 8, ProfesorId = 1, SifraPredmeta = "PR812NN" },
-            //    new Predmet() { Id = 3, NazivPredmeta = "Algebra", BrojESPB = 6, ProfesorId = 5, SifraPredmeta = "PR822NM" },
-            //    new Predmet() { Id = 4, NazivPredmeta = "Analiza", BrojESPB = 5, ProfesorId = 3, SifraPredmeta = "PR580LS" },
-            //    new Predmet() { Id = 5, NazivPredmeta = "Distriburirani racunarski sistemi", BrojESPB = 4, ProfesorId = 5, SifraPredmeta = "PR004NL" },
-            //    new Predmet() { Id = 7, NazivPredmeta = "Mikroprocesorski sistemi", BrojESPB = 5, ProfesorId = 4, SifraPredmeta = "RS93KM" },
-            //    new Predmet() { Id = 8, NazivPredmeta = "Dinamika Fluida", BrojESPB = 3, ProfesorId = 2, SifraPredmeta = "RS96KM" },
-            //    new Predmet() { Id = 9, NazivPredmeta = "Osnove elektrotehnike", BrojESPB = 9, ProfesorId = 2, SifraPredmeta = "SJ97OF" },
-            //    new Predmet() { Id = 10, NazivPredmeta = "Modeliranje i simulacija sistema", BrojESPB = 8, ProfesorId = 5, SifraPredmeta = "PM91KE" },
-            //    new Predmet() { Id = 11, NazivPredmeta = "Arhitektura racunara", BrojESPB = 6, ProfesorId = 1, SifraPredmeta = "SS03PE" },
-            //    new Predmet() { Id = 12, NazivPredmeta = "Internet mreze 1", BrojESPB = 4, ProfesorId = 3, SifraPredmeta = "PE940MM" },
-            //    new Predmet() { Id = 13, NazivPredmeta = "Internet mreze 2", BrojESPB = 4, ProfesorId = 3, SifraPredmeta = "KP399JF" }
-            //);
+            context.Predmeti.AddOrUpdate(
+                new Predmet() { Id = 1, NazivPredmeta = "Baze podataka 1", BrojESPB = 8, ProfesorId = 2, SifraPredmeta = "PR822NN", TipPredispitnihObavezaId = 2 },
+                new Predmet() { Id = 2, NazivPredmeta = "Baze podataka 2", BrojESPB = 8, ProfesorId = 1, SifraPredmeta = "PR812NN", TipPredispitnihObavezaId = 1 },
+                new Predmet() { Id = 3, NazivPredmeta = "Algebra", BrojESPB = 6, ProfesorId = 5, SifraPredmeta = "PR822NM", TipPredispitnihObavezaId = 3 },
+                new Predmet() { Id = 4, NazivPredmeta = "Analiza", BrojESPB = 5, ProfesorId = 3, SifraPredmeta = "PR580LS", TipPredispitnihObavezaId = 4 },
+                new Predmet() { Id = 5, NazivPredmeta = "Distriburirani racunarski sistemi", BrojESPB = 4, ProfesorId = 5, SifraPredmeta = "PR004NL", TipPredispitnihObavezaId = 1 },
+                new Predmet() { Id = 7, NazivPredmeta = "Mikroprocesorski sistemi", BrojESPB = 5, ProfesorId = 4, SifraPredmeta = "RS93KM", TipPredispitnihObavezaId = 2 },
+                new Predmet() { Id = 8, NazivPredmeta = "Dinamika Fluida", BrojESPB = 3, ProfesorId = 2, SifraPredmeta = "RS96KM", TipPredispitnihObavezaId = 1 },
+                new Predmet() { Id = 9, NazivPredmeta = "Osnove elektrotehnike", BrojESPB = 9, ProfesorId = 2, SifraPredmeta = "SJ97OF", TipPredispitnihObavezaId = 3 },
+                new Predmet() { Id = 10, NazivPredmeta = "Modeliranje i simulacija sistema", BrojESPB = 8, ProfesorId = 5, SifraPredmeta = "PM91KE", TipPredispitnihObavezaId = 4 },
+                new Predmet() { Id = 11, NazivPredmeta = "Arhitektura racunara", BrojESPB = 6, ProfesorId = 1, SifraPredmeta = "SS03PE", TipPredispitnihObavezaId = 2 },
+                new Predmet() { Id = 12, NazivPredmeta = "Internet mreze 1", BrojESPB = 4, ProfesorId = 3, SifraPredmeta = "PE940MM", TipPredispitnihObavezaId = 2 },
+                new Predmet() { Id = 13, NazivPredmeta = "Internet mreze 2", BrojESPB = 4, ProfesorId = 3, SifraPredmeta = "KP399JF", TipPredispitnihObavezaId = 2 }
+            );
 
             //context.TokoviStudija.AddOrUpdate(
             //    new TokStudija() { Id = 1, Godina = 1, BrojUpisa = 1, Budzet = true, DatumUpisa = DateTime.Parse("06/16/2017") },

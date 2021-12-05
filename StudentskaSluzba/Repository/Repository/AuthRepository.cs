@@ -16,6 +16,16 @@ namespace StudentskaSluzba.Repository.Repository
             db = new ApplicationDbContext();
         }
 
+        public bool ProfesorChangePassword(string emailProfesora, string newPassword)
+        {
+            int profesorId = db.Profesori.Where(x => x.Email == emailProfesora).FirstOrDefault().Id;
+            Profesor p = db.Profesori.Find(profesorId);
+            p.Password = newPassword;
+            db.Entry<Profesor>(p).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return true;
+        }
+
         public bool ProfesorLogIn(string email, string password)
         {
             List<Profesor> profesori = db.Profesori.ToList();
@@ -27,6 +37,15 @@ namespace StudentskaSluzba.Repository.Repository
                 }
             }
             return false;
+        }
+
+        public void StudentChangePassword(string brojIndeksa, string newPassword)
+        {
+            int studentId = db.Studenti.Where(x => x.BrojIndeksa == brojIndeksa).FirstOrDefault().Id;
+            Student s = db.Studenti.Find(studentId);
+            s.Password = newPassword;
+            db.Entry<Student>(s).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
         }
 
         public bool StudentLogIn(string brojIndeksa, string password)

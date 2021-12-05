@@ -54,5 +54,23 @@ namespace StudentskaSluzba.Repository.Repository
             db.Rezultati.Add(rez);
             db.SaveChanges();
         }
+
+        public bool OdjavaIspita(string brojIndeksa, int predmetId, int ispitniRokId)
+        {
+            int studentId = db.Studenti.Where(x => x.BrojIndeksa == brojIndeksa).FirstOrDefault().Id;
+            List<Rezultati> rezultati = db.Rezultati
+                                            .Where(x => x.StudentId == studentId)
+                                            .Where(x => x.PredmetId == predmetId)
+                                            .ToList();
+            if (rezultati.Count == 0)
+            {
+                return false;
+            }
+
+            db.Rezultati.Remove(rezultati[0]);
+            db.SaveChanges();
+            return true;
+        }
+
     }
 }

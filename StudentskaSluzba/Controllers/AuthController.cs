@@ -39,5 +39,18 @@ namespace StudentskaSluzba.Controllers
             return Ok();
         }
 
+        public IHttpActionResult Put([FromBody] PasswordChangeDTO postDTO)
+        {
+            if (postDTO.OsobaType == "Profesor")
+            {
+                _repository.ProfesorChangePassword(postDTO.OsobaId, postDTO.Password);
+            }
+            else
+            {
+                _repository.StudentChangePassword(postDTO.OsobaId, postDTO.Password);
+            }
+            return Ok();
+        }
+
     }
 }

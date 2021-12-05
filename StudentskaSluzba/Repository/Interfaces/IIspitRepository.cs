@@ -10,6 +10,7 @@ namespace StudentskaSluzba.Repository.Interfaces
     public interface IIspitRepository
     {
         void PrijavaIspita(string studentId, int ispitId,int ispitniRokId);
+        bool OdjavaIspita(string brojIndeksa, int predmetId, int ispitniRokId);
         IEnumerable<PredmetiDTO2> GetPrijavljeniIspiti(string brojIndeksa);
     }
 }

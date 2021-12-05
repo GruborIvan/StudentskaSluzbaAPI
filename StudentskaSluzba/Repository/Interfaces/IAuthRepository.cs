@@ -10,5 +10,7 @@ namespace StudentskaSluzba.Repository.Interfaces
     {
         bool StudentLogIn(string brojIndeksa,string password);
         bool ProfesorLogIn(string email, string password);
+        void StudentChangePassword(string brojIndeksa, string newPassword);
+        bool ProfesorChangePassword(string emailProfesora, string newPassword);
     }
 }

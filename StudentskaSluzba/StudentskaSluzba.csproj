@@ -267,6 +267,7 @@
     <Compile Include="Controllers\PredmetController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\RezultatiController.cs" />
+    <Compile Include="Controllers\RokController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\StudentInfoController.cs" />
     <Compile Include="Global.asax.cs">
@@ -320,6 +321,18 @@
     <Compile Include="Migrations\202111252347439_DonKnw.Designer.cs">
       <DependentUpon>202111252347439_DonKnw.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112032107301_Datum Kraja Vazenja Zvanja Field Add.cs" />
+    <Compile Include="Migrations\202112032107301_Datum Kraja Vazenja Zvanja Field Add.Designer.cs">
+      <DependentUpon>202112032107301_Datum Kraja Vazenja Zvanja Field Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112041539188_Update.cs" />
+    <Compile Include="Migrations\202112041539188_Update.Designer.cs">
+      <DependentUpon>202112041539188_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112041546177_Mistake fix.cs" />
+    <Compile Include="Migrations\202112041546177_Mistake fix.Designer.cs">
+      <DependentUpon>202112041546177_Mistake fix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Adresa.cs" />
     <Compile Include="Models\Auth\AccountBindingModels.cs" />
@@ -327,6 +340,8 @@
     <Compile Include="Models\Auth\IdentityModels.cs" />
     <Compile Include="Models\DTO\AuthDTO.cs" />
     <Compile Include="Models\DTO\OcenaPostDTO.cs" />
+    <Compile Include="Models\DTO\OdjavaIspitaDTO.cs" />
+    <Compile Include="Models\DTO\PasswordChangeDTO.cs" />
     <Compile Include="Models\DTO\PredmetiDTO.cs" />
     <Compile Include="Models\DTO\PredmetiDTO2.cs" />
     <Compile Include="Models\DTO\PrijavaIspitaPostDTO.cs" />
@@ -338,6 +353,7 @@
     <Compile Include="Models\Predmet.cs" />
     <Compile Include="Models\Profesor.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\TipPredispitnihObaveza.cs" />
     <Compile Include="Models\TokStudija.cs" />
     <Compile Include="Models\Ucionica.cs" />
     <Compile Include="Models\Rezultati.cs" />
@@ -349,12 +365,14 @@
     <Compile Include="Repository\Interfaces\IPredmetRepository.cs" />
     <Compile Include="Repository\Interfaces\IProfesorRepository.cs" />
     <Compile Include="Repository\Interfaces\IRezultatiRepository.cs" />
+    <Compile Include="Repository\Interfaces\IRokRepository.cs" />
     <Compile Include="Repository\Interfaces\IStudentRepository.cs" />
     <Compile Include="Repository\Repository\AuthRepository.cs" />
     <Compile Include="Repository\Repository\IspitRepository.cs" />
     <Compile Include="Repository\Repository\PredmetRepository.cs" />
     <Compile Include="Repository\Repository\ProfesorRepository.cs" />
     <Compile Include="Repository\Repository\RezultatiRepository.cs" />
+    <Compile Include="Repository\Repository\RokRepository.cs" />
     <Compile Include="Repository\Repository\StudentRepository.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
@@ -483,6 +501,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111252347439_DonKnw.resx">
       <DependentUpon>202111252347439_DonKnw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112032107301_Datum Kraja Vazenja Zvanja Field Add.resx">
+      <DependentUpon>202112032107301_Datum Kraja Vazenja Zvanja Field Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112041539188_Update.resx">
+      <DependentUpon>202112041539188_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112041546177_Mistake fix.resx">
+      <DependentUpon>202112041546177_Mistake fix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

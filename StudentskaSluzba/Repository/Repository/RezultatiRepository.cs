@@ -57,11 +57,18 @@ namespace StudentskaSluzba.Repository.Repository
                         }
                     }
 
-                    dto.DatumIspita = db.Ispiti
+                    List<Ispit> ispiti = db.Ispiti
                                             .Where(x => x.PredmetId == dto.Id)
                                             .Where(x => x.IspitniRokId == ispitniRokId)
-                                            .FirstOrDefault()
-                                            .DatumIVremeOdrzavanja.ToString("dd.MM.yyyy");
+                                            .ToList();
+                    if (ispiti.Count > 0)
+                    {
+                        dto.DatumIspita = ispiti[0].DatumIVremeOdrzavanja.ToString("dd.MM.yyyy");
+                    }
+                    else
+                    {
+                        dto.DatumIspita = "Not a date.";
+                    }
                 }
             }
             else

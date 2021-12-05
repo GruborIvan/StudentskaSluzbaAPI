@@ -12,6 +12,7 @@ namespace StudentskaSluzba.Models
         public int Id { get; set; }
         public Zvanje Zvanje { get; set; }
         public DateTime DatumDobijanjaZvanja { get; set; }
+        public DateTime DatumKrajaVazenjaZvanja { get; set; }
         public ICollection<Profesor> Profesori { get; set; }
     }
 

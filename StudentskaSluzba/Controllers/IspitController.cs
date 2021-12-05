@@ -34,5 +34,15 @@ namespace StudentskaSluzba.Controllers
             return Ok();
         }
 
+        public IHttpActionResult Delete([FromBody] OdjavaIspitaDTO odjavaPayload)
+        {
+            bool result = repo.OdjavaIspita(odjavaPayload.BrojIndeksa, odjavaPayload.PredmetId, odjavaPayload.IspitniRokId);
+            if (!result)
+            {
+                return NotFound();
+            }
+            return Ok();
+        }
+
     }
 }
