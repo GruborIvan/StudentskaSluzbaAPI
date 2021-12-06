@@ -164,3 +164,9 @@ C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug
 C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.DatumKrajaVazenjaZvanjaFieldAdd.resources
 C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.Update.resources
 C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\obj\Debug\StudentskaSluzba.Migrations.Mistakefix.resources
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\bin\PdfSharp.Charting.dll
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\bin\PdfSharp.dll
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\bin\PdfSharp.xml
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\bin\PdfSharp.Charting.xml
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\bin\de\PdfSharp.resources.dll
+C:\Users\i.grubor\Desktop\Diplomski\Studentska Sluzba\StudentskaSluzba\bin\de\PdfSharp.Charting.resources.dll
